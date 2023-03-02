@@ -12,6 +12,7 @@
 					<th scope="col">Product Name</th>
 					<th scope="col">Description</th>
 					<th scope="col">Price</th>
+					<th scope="col">Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -20,7 +21,11 @@
 					<th scope="row">${p.id }</th>
 					<td>${p.name }</td>
 					<td>${p.description }</td>
-					<td>${p.price }</td>
+					<td class="fw-bold">&#8377 ${p.price }</td>
+					<td>
+						<a href="delete-product/${p.id }"> <i class="bi bi-trash3-fill text-danger"></i> </a>
+						<a href="update-product/${p.id }"> <i class="bi bi-pen-fill text-primary ms-2"></i> </a>
+					</td>
 				</tr>
 			</c:forEach>	
 			</tbody>
